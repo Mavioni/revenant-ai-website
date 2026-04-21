@@ -80,7 +80,7 @@ export const aboutConfig: AboutConfig = {
   titleLine1: "Binary is the degenerate case.",
   titleLine2: "The future belongs to three.",
   description: "Revenant AI was founded in 2026 as the operationalization of a discovery: that the binary assumption which has governed computation since 1937 is not nature—it is choice. A choice that has cost us the capacity to represent the included middle: the state of genuine uncertainty, the moment before decision, the synthesis that transcends thesis and antithesis. We build systems on balanced ternary logic {-1, 0, +1}, where zero is not absence but the most information-rich state—the ground from which all transformation emerges. This is not an optimization. It is transdifferentiation: a direct conversion from one organized state to another, carrying every insight forward while reorganizing into a structure that embodies what it describes.",
-  image1: "/about-1.png",
+  image1: "/about-1.jpg",
   image1Alt: "The Ternary Architecture {-1, 0, +1}",
   image2: "/about-2.png",
   image2Alt: "Binary Dissolving into Ternary",
