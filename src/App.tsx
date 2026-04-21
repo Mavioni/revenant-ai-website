@@ -181,7 +181,7 @@ function AppShell() {
 
 function App() {
   return (
-    <BrowserRouter basename="/revenant-ai-website/">
+    <BrowserRouter>
       <AppShell />
     </BrowserRouter>
   );
