@@ -1,4 +1,4 @@
-# Yunis AI — revenant.ai
+# Revenant AI — revenant-ai.org
 # Allow all crawlers across the entire site.
 
 User-agent: *
