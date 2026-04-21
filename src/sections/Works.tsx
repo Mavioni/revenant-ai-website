@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Rocket } from "lucide-react";
 import { PROJECTS, type Project } from "../data/projects";
 import { worksConfig } from "../config";
+import { TerminalVisualizer } from "../components/animations/TerminalVisualizer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -201,12 +202,9 @@ export function Works() {
                   // No aria-label: the visible title + category inside the link
                   // IS the accessible name (satisfies WCAG 2.5.3 label-in-name).
                 >
-                  <img
-                    src={project.heroImage}
-                    alt=""
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
+                  <div className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none">
+                    <TerminalVisualizer context={project.slug} />
+                  </div>
 
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500" />

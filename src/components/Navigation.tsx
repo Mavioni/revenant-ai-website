@@ -115,7 +115,7 @@ export function Navigation() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between">
           {/* Logo — always routes home. No aria-label so the visible text
-              ("YUNIS") IS the accessible name (WCAG label-content-mismatch). */}
+              ("REVENANT") IS the accessible name (WCAG label-content-mismatch). */}
           <Link
             to="/"
             className="text-h6 font-medium text-white hover:text-highlight transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 focus:ring-offset-black rounded px-2 -ml-2"

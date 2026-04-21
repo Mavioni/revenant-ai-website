@@ -1,5 +1,6 @@
 import type { Project } from "../../data/projects";
 import { StatusBadge } from "./StatusBadge";
+import { TerminalVisualizer } from "../animations/TerminalVisualizer";
 
 interface ProjectHeroProps {
   project: Project;
@@ -41,12 +42,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           {/* Image column */}
           <div className="lg:col-span-5 order-1 lg:order-2 w-full">
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#0a0a0a] shadow-2xl shadow-black/50">
-              <img
-                src={project.heroImage}
-                alt={`${project.name} illustration`}
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
+              <TerminalVisualizer context={project.slug} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
               <div
                 className="absolute inset-0 border border-white/10 pointer-events-none"

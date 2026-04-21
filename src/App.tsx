@@ -58,7 +58,7 @@ function AppShell() {
       "(prefers-reduced-motion: reduce)",
     ).matches;
     if (reduceMotion) return false;
-    return sessionStorage.getItem("yunis_intro_seen") !== "1";
+    return sessionStorage.getItem("REVENANT_intro_seen") !== "1";
   });
 
   // Single-fire guard for handleLoadingComplete — fixes stale-closure bug where
@@ -78,7 +78,7 @@ function AppShell() {
 
   const handleIntroComplete = useCallback(() => {
     try {
-      sessionStorage.setItem("yunis_intro_seen", "1");
+      sessionStorage.setItem("REVENANT_intro_seen", "1");
     } catch {
       /* storage can throw in privacy modes — ignore */
     }

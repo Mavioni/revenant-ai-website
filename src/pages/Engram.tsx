@@ -23,7 +23,7 @@ export function Engram() {
 
   useEffect(() => {
     const prevTitle = document.title;
-    document.title = "Engram — Yunis AI";
+    document.title = "Engram — Revenant AI";
     return () => {
       document.title = prevTitle;
     };

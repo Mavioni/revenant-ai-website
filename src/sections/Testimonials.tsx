@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Quote } from 'lucide-react';
 import { testimonialsConfig } from '../config';
+import { TerminalVisualizer } from '../components/animations/TerminalVisualizer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -153,12 +154,7 @@ export function Testimonials() {
               {/* Author */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-highlight/30">
-                  <img
-                    src={testimonial.image}
-                    alt=""
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
+                  <TerminalVisualizer context="client-node" className="opacity-90" />
                 </div>
                 <div>
                   <p className="text-body font-medium text-white">

@@ -68,7 +68,7 @@ export function LoadingScreen({ isLoading, onComplete }: LoadingScreenProps) {
       {/* Logo */}
       <div ref={logoRef} className="relative mb-12">
         <div className="text-[80px] md:text-[120px] font-medium tracking-tight text-white">
-          {'YUNIS'.split('').map((char, i) => (
+          {'REVENANT'.split('').map((char, i) => (
             <span
               key={i}
               className="inline-block animate-pulse"

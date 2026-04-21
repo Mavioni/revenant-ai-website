@@ -2,6 +2,7 @@ import { useEffect, useRef, useCallback } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { heroConfig } from '../config';
+import { UniverseSimulation } from '../components/animations/UniverseSimulation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -204,13 +205,9 @@ export function Hero() {
             transformStyle: 'preserve-3d',
           }}
         >
-          <img
-            src={heroConfig.backgroundImage}
-            alt=""
-            className="w-full h-full object-cover"
-            style={{ filter: 'brightness(0.85)' }}
-            loading="eager"
-          />
+          <div className="w-full h-full object-cover absolute inset-0 bg-black" style={{ filter: 'brightness(0.85)' }}>
+            <UniverseSimulation />
+          </div>
         </div>
       </div>
 

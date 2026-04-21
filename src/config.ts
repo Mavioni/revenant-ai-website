@@ -9,8 +9,8 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  title: "Yunis AI — The Ternary Architecture of Mind, Body, and Machine",
-  description: "Sovereign, local-first AI systems built on balanced ternary logic {-1, 0, +1}. Founded 2026 by Massimo Panella, author of The Human Element (Yunis AI Press, 2026). Operated as Revenant AI LLC, Wyoming.",
+  title: "Revenant AI — The Ternary Architecture of Mind, Body, and Machine",
+  description: "Sovereign, local-first AI systems built on balanced ternary logic {-1, 0, +1}. Founded 2026 by Massimo Panella, author of The Human Element (Revenant AI Press, 2026). Operated as Revenant AI LLC, Wyoming.",
   language: "en",
 };
 
@@ -29,7 +29,7 @@ export interface NavigationConfig {
 }
 
 export const navigationConfig: NavigationConfig = {
-  logo: "YUNIS",
+  logo: "REVENANT",
   items: [
     { label: "Philosophy", href: "#about" },
     { label: "The Stack", href: "#services" },
@@ -52,7 +52,7 @@ export interface HeroConfig {
 }
 
 export const heroConfig: HeroConfig = {
-  title: "YUNIS",
+  title: "REVENANT",
   subtitle: "The Ternary Architecture of Mind, Body, and Machine",
   backgroundImage: "/hero-main.png",
   servicesLabel: "Ternary Logic {-1, 0, +1} | The Included Middle | Sovereign Systems",
@@ -79,14 +79,14 @@ export interface AboutConfig {
 export const aboutConfig: AboutConfig = {
   titleLine1: "Binary is the degenerate case.",
   titleLine2: "The future belongs to three.",
-  description: "Yunis AI was founded in 2026 as the operationalization of a discovery: that the binary assumption which has governed computation since 1937 is not nature—it is choice. A choice that has cost us the capacity to represent the included middle: the state of genuine uncertainty, the moment before decision, the synthesis that transcends thesis and antithesis. We build systems on balanced ternary logic {-1, 0, +1}, where zero is not absence but the most information-rich state—the ground from which all transformation emerges. This is not an optimization. It is transdifferentiation: a direct conversion from one organized state to another, carrying every insight forward while reorganizing into a structure that embodies what it describes.",
+  description: "Revenant AI was founded in 2026 as the operationalization of a discovery: that the binary assumption which has governed computation since 1937 is not nature—it is choice. A choice that has cost us the capacity to represent the included middle: the state of genuine uncertainty, the moment before decision, the synthesis that transcends thesis and antithesis. We build systems on balanced ternary logic {-1, 0, +1}, where zero is not absence but the most information-rich state—the ground from which all transformation emerges. This is not an optimization. It is transdifferentiation: a direct conversion from one organized state to another, carrying every insight forward while reorganizing into a structure that embodies what it describes.",
   image1: "/about-1.png",
   image1Alt: "The Ternary Architecture {-1, 0, +1}",
   image2: "/about-2.png",
   image2Alt: "Binary Dissolving into Ternary",
   authorImage: "/photographer.png",
   authorName: "Massimo Panella",
-  authorBio: "Founder of Yunis AI (operated as Revenant AI LLC, Wyoming). Author of *The Human Element: The Ternary Architecture of Mind, Body, and Machine* (Yunis AI Press, 2026). Palestinian-Italian sovereign-technology architect. Solo operator — no employees, only agentic systems embodying the Sovereign Stack. My work converges balanced ternary logic (Brusentsov's Setun, 1958; Knuth's radix economy; Microsoft's BitNet b1.58, 2024), biological transdifferentiation mapped across the Waddington landscape, and the dialectical spirals of Hegel, the Stoics, and the Flower Sermon — reorganized into a single architecture for personal sovereignty. The lotus grows from mud through water into air. This is the shape of three.",
+  authorBio: "Founder of Revenant AI (operated as Revenant AI LLC, Wyoming). Author of *The Human Element: The Ternary Architecture of Mind, Body, and Machine* (Revenant AI Press, 2026). Palestinian-Italian sovereign-technology architect. Solo operator — no employees, only agentic systems embodying the Sovereign Stack. My work converges balanced ternary logic (Brusentsov's Setun, 1958; Knuth's radix economy; Microsoft's BitNet b1.58, 2024), biological transdifferentiation mapped across the Waddington landscape, and the dialectical spirals of Hegel, the Stoics, and the Flower Sermon — reorganized into a single architecture for personal sovereignty. The lotus grows from mud through water into air. This is the shape of three.",
 };
 
 // ============================================================================
@@ -330,8 +330,8 @@ export const faqConfig: FAQConfig = {
       answer: "Binary logic operates on {0, 1}—presence or absence, yes or no. Ternary logic operates on {-1, 0, +1}—thesis, antithesis, and synthesis. The zero is not a compromise between -1 and +1. It is an independent state: the included middle, the ground of transformation, the moment before decision. Binary is the degenerate case of ternary—what you get when you collapse the middle dimension. As Donald Knuth wrote: 'Perhaps the prettiest number system of all is the balanced ternary system.'"
     },
     {
-      question: "How does Yunis AI differ from other AI companies?",
-      answer: "Yunis AI was founded in 2026 by Massimo Panella, author of *The Human Element: The Ternary Architecture of Mind, Body, and Machine* (Yunis AI Press, 2026), operated legally as Revenant AI LLC (Wyoming). I am not a consultancy. I am a solo operator working with agentic systems that embody the ternary philosophy. I have no employees. I build systems that demonstrate what becomes possible when you stop thinking in binary. Other firms optimize within the existing paradigm. I am building a new paradigm from the silicon up—local-first, sovereign by design, dialectical at every layer."
+      question: "How does Revenant AI differ from other AI companies?",
+      answer: "Revenant AI was founded in 2026 by Massimo Panella, author of *The Human Element: The Ternary Architecture of Mind, Body, and Machine* (Revenant AI Press, 2026), operated legally as Revenant AI LLC (Wyoming). I am not a consultancy. I am a solo operator working with agentic systems that embody the ternary philosophy. I have no employees. I build systems that demonstrate what becomes possible when you stop thinking in binary. Other firms optimize within the existing paradigm. I am building a new paradigm from the silicon up—local-first, sovereign by design, dialectical at every layer."
     },
     { 
       question: "What is the Transdifferentiation Invariant?", 
@@ -420,7 +420,7 @@ The future belongs to three. The future has always belonged to three. We just fo
 
 ---
 
-*Massimo Panella is the founder of Yunis AI (operated as Revenant AI LLC, Wyoming) and author of The Human Element: The Ternary Architecture of Mind, Body, and Machine (Yunis AI Press, 2026).*`,
+*Massimo Panella is the founder of Revenant AI (operated as Revenant AI LLC, Wyoming) and author of The Human Element: The Ternary Architecture of Mind, Body, and Machine (Revenant AI Press, 2026).*`,
       readTime: "12 min", 
       date: "Apr 2026", 
       image: "/blog-1.png", 
@@ -476,7 +476,7 @@ The lotus grows from mud through water into air. This is the shape of three. Thi
 
 ---
 
-*Massimo Panella is the founder of Yunis AI (operated as Revenant AI LLC, Wyoming) and author of The Human Element: The Ternary Architecture of Mind, Body, and Machine (Yunis AI Press, 2026).*`,
+*Massimo Panella is the founder of Revenant AI (operated as Revenant AI LLC, Wyoming) and author of The Human Element: The Ternary Architecture of Mind, Body, and Machine (Revenant AI Press, 2026).*`,
       readTime: "18 min", 
       date: "Mar 2026", 
       image: "/blog-2.png", 

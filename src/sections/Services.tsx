@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { servicesConfig } from '../config';
+import { TerminalVisualizer } from '../components/animations/TerminalVisualizer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -156,12 +157,7 @@ export function Services() {
         }}
       >
         {activeIndex !== null && (
-          <img
-            src={services[activeIndex].image}
-            alt=""
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+          <TerminalVisualizer context={services[activeIndex].id} />
         )}
       </div>
 

@@ -7,6 +7,7 @@ import { ProjectSection } from "../components/project/ProjectSection";
 import { ProjectCTA } from "../components/project/ProjectCTA";
 import { TechBadges } from "../components/project/TechBadges";
 import { Footer } from "../sections/Footer";
+import { TerminalVisualizer } from "../components/animations/TerminalVisualizer";
 
 /**
  * Data-driven project detail page at /manifestations/:slug. Reads the registry
@@ -27,7 +28,7 @@ export function ProjectPage() {
   useEffect(() => {
     if (project) {
       const prevTitle = document.title;
-      document.title = `${project.name} — Yunis AI`;
+      document.title = `${project.name} — Revenant AI`;
       return () => {
         document.title = prevTitle;
       };
@@ -101,7 +102,7 @@ export function ProjectPage() {
                 ))}
               </ul>
               <p className="text-body-sm text-white/40 mt-4 italic">
-                From <span className="text-white/60">The Human Element: The Ternary Architecture of Mind, Body, and Machine</span> — Yunis AI Press, 2026.
+                From <span className="text-white/60">The Human Element: The Ternary Architecture of Mind, Body, and Machine</span> — Revenant AI Press, 2026.
               </p>
             </section>
           )}
@@ -121,12 +122,7 @@ export function ProjectPage() {
                   className="group block"
                 >
                   <div className="relative aspect-[4/3] bg-[#0a0a0a] overflow-hidden mb-4">
-                    <img
-                      src={p.heroImage}
-                      alt={p.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
+                    <TerminalVisualizer context={p.slug} />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   </div>
                   <p className="text-body-sm uppercase tracking-widest text-white/50 group-hover:text-highlight transition-colors duration-200 mb-1">

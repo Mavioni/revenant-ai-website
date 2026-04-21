@@ -9,6 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
+import { TerminalVisualizer } from '../components/animations/TerminalVisualizer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -193,12 +194,9 @@ export function Blog() {
             >
               {/* Image */}
               <div className="post-image relative aspect-[16/9] overflow-hidden mb-5 md:mb-6">
-                <img
-                  src={post.image}
-                  alt=""
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
+                <div className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                  <TerminalVisualizer context="blog-node" />
+                </div>
 
                 {/* Category tag */}
                 <div className="absolute top-4 left-4 px-3 py-1.5 bg-black/80 backdrop-blur-sm">
@@ -254,11 +252,7 @@ export function Blog() {
             <>
               {/* Header Image */}
               <div className="relative aspect-[21/9] w-full">
-                <img
-                  src={selectedPost.image}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
+                <TerminalVisualizer context="blog-node" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                 <button
                   onClick={closePost}

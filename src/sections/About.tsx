@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { aboutConfig } from '../config';
+import { TerminalVisualizer } from '../components/animations/TerminalVisualizer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -176,12 +177,7 @@ export function About() {
               className="relative w-full aspect-[2/3] overflow-hidden group cursor-pointer bg-[#0a0a0a]"
               style={{ willChange: 'clip-path, transform' }}
             >
-              <img
-                src={aboutConfig.image1}
-                alt={aboutConfig.image1Alt}
-                className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.03]"
-                loading="lazy"
-              />
+              <TerminalVisualizer context="architecture" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
 
@@ -191,12 +187,7 @@ export function About() {
               className="relative w-3/4 aspect-[2/3] -mt-24 md:-mt-32 ml-auto mr-4 overflow-hidden group cursor-pointer z-10 shadow-2xl shadow-black/50 bg-[#0a0a0a]"
               style={{ willChange: 'clip-path, transform' }}
             >
-              <img
-                src={aboutConfig.image2}
-                alt={aboutConfig.image2Alt}
-                className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.03]"
-                loading="lazy"
-              />
+              <TerminalVisualizer context="evolution" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </div>
@@ -241,12 +232,7 @@ export function About() {
                 className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 overflow-hidden rounded-full border-2 border-highlight/40 shadow-lg shadow-highlight/10"
                 style={{ willChange: 'transform, opacity' }}
               >
-                <img
-                  src={aboutConfig.authorImage}
-                  alt={aboutConfig.authorName}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                <TerminalVisualizer context="identity" className="opacity-80" />
               </div>
 
               {/* Author text */}

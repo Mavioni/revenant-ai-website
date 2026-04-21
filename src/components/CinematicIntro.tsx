@@ -6,7 +6,7 @@ import * as THREE from "three";
 /**
  * CinematicIntro — "The Trit Unfolds"
  *
- * A ~7-second React Three Fiber sequence that establishes Yunis AI's ternary
+ * A ~7-second React Three Fiber sequence that establishes Revenant AI's ternary
  * brand through geometry before handing off to the home page.
  *
  * Phase timings (seconds from mount):
@@ -14,7 +14,7 @@ import * as THREE from "three";
  *   1.0 – 2.5  Trit splits into 3 (thesis/antithesis/synthesis). Triangle forms.
  *   2.5 – 4.0  Triangle extrudes into a 5-petal Fibonacci lotus lattice
  *              (golden angle ≈ 137.5°) rotating slowly.
- *   4.0 – 5.5  Camera pulls back; "YUNIS" text fades in over the lattice.
+ *   4.0 – 5.5  Camera pulls back; "REVENANT" text fades in over the lattice.
  *   5.5 – 7.0  Lattice dissolves; overlay fades to transparent revealing site.
  *
  * Skip: click-anywhere, Skip button bottom-right, or Escape key.
@@ -338,7 +338,7 @@ function Scene({ onTick }: SceneProps) {
         })}
       </group>
 
-      {/* YUNIS title */}
+      {/* REVENANT title */}
       <Text
         position={[0, -1.6, 0]}
         fontSize={0.55}
@@ -351,7 +351,7 @@ function Scene({ onTick }: SceneProps) {
         outlineColor={HIGHLIGHT_HEX}
         outlineOpacity={textOpacity * 0.6}
       >
-        YUNIS
+        REVENANT
       </Text>
 
       {/* Subtitle */}
