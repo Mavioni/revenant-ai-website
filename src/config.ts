@@ -556,9 +556,10 @@ export const footerConfig: FooterConfig = {
     { label: "Sovereignty", href: "#pricing" },
   ],
   navLinks2: [
-    { label: "The Human Element", href: "#", icon: "BookOpen" },
+    { label: "The Human Element", href: "https://www.lulu.com/shop/massimo-panella/the-human-element/ebook/product-e7n4wdg.html?page=1&pageSize=4", icon: "BookOpen" },
     { label: "GitHub", href: "https://github.com/Mavioni", icon: "Github" },
     { label: "Contact", href: "#contact", icon: "Mail" },
+    { label: "Instagram", href: "https://instagram.com/revenant_ai", icon: "Instagram" },
   ],
   ctaText: "Enter the Pause",
   ctaHref: "#contact",
