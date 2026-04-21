@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-ssr
+*.local
+.npm
+.eslintcache
+.vite
+.env
+.env.*
+!.env.example
+.DS_Store

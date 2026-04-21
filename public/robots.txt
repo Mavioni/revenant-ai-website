@@ -1,0 +1,11 @@
+# Yunis AI — revenant.ai
+# Allow all crawlers across the entire site.
+
+User-agent: *
+Allow: /
+
+# Block the embedded Engram app route from being crawled directly from
+# this site — Engram has its own canonical URL for search indexing.
+Disallow: /engram
+
+Sitemap: https://revenant.ai/sitemap.xml

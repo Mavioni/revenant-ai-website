@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engram — Warming Up</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #000000;
+        --bg-2: #0a0a0a;
+        --fg: #ffffff;
+        --muted: rgba(255, 255, 255, 0.5);
+        --highlight: #ea0000;
+        --border: rgba(255, 255, 255, 0.1);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family:
+          "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+        background:
+          radial-gradient(
+            ellipse 50% 40% at 50% 50%,
+            rgba(234, 0, 0, 0.08),
+            transparent 60%
+          ),
+          var(--bg);
+      }
+      .trit-logo {
+        margin-bottom: 2.5rem;
+      }
+      .trit-logo svg {
+        width: 64px;
+        height: 64px;
+      }
+      .trit-logo rect {
+        fill: var(--highlight);
+        animation: pulse 2.4s ease-in-out infinite;
+      }
+      .trit-logo rect:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      .trit-logo rect:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.5;
+          transform: scaleX(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scaleX(1.08);
+        }
+      }
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        font-size: 0.75rem;
+        color: var(--highlight);
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        margin: 0 0 1rem;
+        line-height: 1.1;
+      }
+      p.lead {
+        max-width: 36rem;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.6;
+        margin: 0 0 2rem;
+      }
+      code {
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        padding: 0.1em 0.4em;
+        border-radius: 2px;
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.9em;
+        color: #ff9999;
+      }
+      .env-note {
+        max-width: 40rem;
+        padding: 1.25rem 1.5rem;
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        border-left: 2px solid var(--highlight);
+        text-align: left;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-top: 1rem;
+      }
+      .env-note strong {
+        color: var(--fg);
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="trit-logo" aria-hidden="true">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="24" width="40" height="10" />
+        <rect x="14" y="45" width="72" height="10" />
+        <rect x="30" y="66" width="40" height="10" />
+      </svg>
+    </div>
+    <p class="eyebrow">Engram</p>
+    <h1>Warming up.</h1>
+    <p class="lead">
+      Engram runs as its own deployment. This route embeds it inside Yunis AI,
+      but the iframe source isn't configured yet.
+    </p>
+    <div class="env-note">
+      <strong>To wire it up:</strong> add
+      <code>VITE_ENGRAM_URL=https://mavioni.github.io/Project-Engram/</code>
+      to <code>.env.local</code> in the site repo, restart the dev server, and
+      this iframe will load the live Engram build. Point it at a custom domain
+      (like <code>engram.revenant.ai</code>) once you have one.
+    </div>
+  </body>
+</html>
