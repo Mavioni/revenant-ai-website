@@ -123,9 +123,9 @@ export function ProjectPage() {
                 >
                   <div className="relative aspect-[4/3] bg-[#0a0a0a] overflow-hidden mb-4">
                     <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.03]">
-                      <img src={p.heroImage} alt={p.name} className="w-full h-full object-cover grayscale brightness-[0.7]" />
+                      <img src={p.heroImage} alt={p.name} className="w-full h-full object-cover grayscale brightness-[0.25]" />
                     </div>
-                    <div className="absolute inset-0 pointer-events-none mix-blend-screen opacity-80">
+                    <div className="absolute inset-0 pointer-events-none opacity-100 z-10">
                       <ProjectHologram seed={p.slug} />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />

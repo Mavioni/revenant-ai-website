@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { MeshDistortMaterial } from '@react-three/drei';
+import { Edges } from '@react-three/drei';
 import * as THREE from 'three';
 
 function HologramShape({ seed = '' }: { seed?: string }) {
@@ -18,18 +18,17 @@ function HologramShape({ seed = '' }: { seed?: string }) {
 
   return (
     <mesh ref={meshRef}>
-      {shapeIndex === 0 && <icosahedronGeometry args={[2, 1]} />}
-      {shapeIndex === 1 && <octahedronGeometry args={[2, 2]} />}
-      {shapeIndex === 2 && <dodecahedronGeometry args={[1.8, 1]} />}
-      {shapeIndex === 3 && <tetrahedronGeometry args={[2.2, 2]} />}
+      {shapeIndex === 0 && <icosahedronGeometry args={[2, 0]} />}
+      {shapeIndex === 1 && <octahedronGeometry args={[2, 0]} />}
+      {shapeIndex === 2 && <dodecahedronGeometry args={[1.8, 0]} />}
+      {shapeIndex === 3 && <tetrahedronGeometry args={[2, 0]} />}
       {shapeIndex === 4 && <torusKnotGeometry args={[1.2, 0.4, 64, 8]} />}
-      <MeshDistortMaterial
-        color="#aa0000"
-        wireframe={true}
-        distort={0.4}
-        speed={2}
-        transparent
-        opacity={0.8}
+      
+      {/* Invisible material so only Edges show */}
+      <meshBasicMaterial color="#000000" transparent opacity={0.1} />
+      <Edges 
+        linewidth={2} 
+        color="#E53935" 
       />
     </mesh>
   );

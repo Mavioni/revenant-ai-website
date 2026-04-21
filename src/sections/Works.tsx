@@ -203,9 +203,9 @@ export function Works() {
                   // IS the accessible name (satisfies WCAG 2.5.3 label-in-name).
                 >
                   <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.03]">
-                    <img src={project.heroImage} alt={project.name} className="w-full h-full object-cover grayscale brightness-[0.7]" />
+                    <img src={project.heroImage} alt={project.name} className="w-full h-full object-cover grayscale brightness-[0.25]" />
                   </div>
-                  <div className="absolute inset-0 pointer-events-none mix-blend-screen opacity-80">
+                  <div className="absolute inset-0 pointer-events-none opacity-100 z-10">
                     <ProjectHologram seed={project.slug} />
                   </div>
 

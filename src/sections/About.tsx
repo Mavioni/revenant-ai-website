@@ -2,14 +2,12 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { aboutConfig } from '../config';
-import { AsciiSpaceshipVisualizer } from '../components/animations/AsciiSpaceshipVisualizer';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function About() {
   const sectionRef = useRef<HTMLElement>(null);
   const image1Ref = useRef<HTMLDivElement>(null);
-  const image2Ref = useRef<HTMLDivElement>(null);
   const authorImageRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -40,19 +38,6 @@ export function About() {
             duration: 1.2,
             ease: 'expo.out',
           }
-        );
-
-        // Image 2 clip reveal
-        tl.fromTo(
-          image2Ref.current,
-          { clipPath: 'inset(0 100% 0 0)', scale: 1.05 },
-          {
-            clipPath: 'inset(0 0% 0 0)',
-            scale: 1,
-            duration: 1.1,
-            ease: 'expo.out',
-          },
-          '-=0.85'
         );
 
         // Title lines reveal
@@ -134,11 +119,6 @@ export function About() {
             y: 40 - self.progress * 80,
           });
         }
-        if (image2Ref.current) {
-          gsap.set(image2Ref.current, {
-            y: -20 + self.progress * 40,
-          });
-        }
         if (authorImageRef.current) {
           gsap.set(authorImageRef.current, {
             y: 20 - self.progress * 40,
@@ -184,19 +164,6 @@ export function About() {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </div>
-
-            {/* Image 2 — lotus architecture diagram; contain + letterbox for the square source */}
-            <div
-              ref={image2Ref}
-              className="relative w-3/4 aspect-[2/3] -mt-24 md:-mt-32 ml-auto mr-4 overflow-hidden group cursor-pointer z-10 shadow-2xl shadow-black/50 bg-[#0a0a0a]"
-              style={{ willChange: 'clip-path, transform' }}
-            >
-              <img src={aboutConfig.image2} alt={aboutConfig.image2Alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
-              <div className="absolute inset-0 z-10 mix-blend-screen pointer-events-none opacity-80">
-                <AsciiSpaceshipVisualizer />
-              </div>
-              <div className="absolute z-20 inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </div>
 

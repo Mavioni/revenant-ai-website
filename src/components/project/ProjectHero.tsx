@@ -43,9 +43,9 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           <div className="lg:col-span-5 order-1 lg:order-2 w-full">
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#0a0a0a] shadow-2xl shadow-black/50">
               <div className="absolute inset-0">
-                <img src={project.heroImage} alt={project.name} className="w-full h-full object-cover grayscale" />
+                <img src={project.heroImage} alt={project.name} className="w-full h-full object-cover grayscale brightness-[0.25]" />
               </div>
-              <div className="absolute inset-0 pointer-events-none mix-blend-screen opacity-90">
+              <div className="absolute inset-0 pointer-events-none z-10 opacity-100">
                 <ProjectHologram seed={project.slug} />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
