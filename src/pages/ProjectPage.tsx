@@ -122,7 +122,7 @@ export function ProjectPage() {
                   className="group block"
                 >
                   <div className="relative aspect-[4/3] bg-[#0a0a0a] overflow-hidden mb-4">
-                    <ProjectHologram />
+                    <ProjectHologram seed={p.slug} />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   </div>
                   <p className="text-body-sm uppercase tracking-widest text-white/50 group-hover:text-highlight transition-colors duration-200 mb-1">

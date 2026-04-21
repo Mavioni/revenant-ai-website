@@ -203,7 +203,7 @@ export function Works() {
                   // IS the accessible name (satisfies WCAG 2.5.3 label-in-name).
                 >
                   <div className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none">
-                    <ProjectHologram />
+                    <ProjectHologram seed={project.slug} />
                   </div>
 
                   {/* Gradient overlay */}
