@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { aboutConfig } from '../config';
-import { TerminalVisualizer } from '../components/animations/TerminalVisualizer';
+import { AsciiSpaceshipVisualizer } from '../components/animations/AsciiSpaceshipVisualizer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -177,7 +177,7 @@ export function About() {
               className="relative w-full aspect-[2/3] overflow-hidden group cursor-pointer bg-[#0a0a0a]"
               style={{ willChange: 'clip-path, transform' }}
             >
-              <TerminalVisualizer context="architecture" />
+              <AsciiSpaceshipVisualizer />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
 
@@ -187,7 +187,7 @@ export function About() {
               className="relative w-3/4 aspect-[2/3] -mt-24 md:-mt-32 ml-auto mr-4 overflow-hidden group cursor-pointer z-10 shadow-2xl shadow-black/50 bg-[#0a0a0a]"
               style={{ willChange: 'clip-path, transform' }}
             >
-              <TerminalVisualizer context="evolution" />
+              <AsciiSpaceshipVisualizer />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </div>
@@ -232,7 +232,7 @@ export function About() {
                 className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 overflow-hidden rounded-full border-2 border-highlight/40 shadow-lg shadow-highlight/10"
                 style={{ willChange: 'transform, opacity' }}
               >
-                <TerminalVisualizer context="identity" className="opacity-80" />
+                <AsciiSpaceshipVisualizer />
               </div>
 
               {/* Author text */}

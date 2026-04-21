@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { servicesConfig } from '../config';
-import { TerminalVisualizer } from '../components/animations/TerminalVisualizer';
+import { ServiceNodeNetwork } from '../components/animations/ServiceNodeNetwork';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -157,7 +157,7 @@ export function Services() {
         }}
       >
         {activeIndex !== null && (
-          <TerminalVisualizer context={services[activeIndex].id} />
+          <ServiceNodeNetwork />
         )}
       </div>
 

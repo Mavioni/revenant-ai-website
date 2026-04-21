@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Rocket } from "lucide-react";
 import { PROJECTS, type Project } from "../data/projects";
 import { worksConfig } from "../config";
-import { TerminalVisualizer } from "../components/animations/TerminalVisualizer";
+import { ProjectHologram } from "../components/animations/ProjectHologram";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -203,7 +203,7 @@ export function Works() {
                   // IS the accessible name (satisfies WCAG 2.5.3 label-in-name).
                 >
                   <div className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none">
-                    <TerminalVisualizer context={project.slug} />
+                    <ProjectHologram />
                   </div>
 
                   {/* Gradient overlay */}

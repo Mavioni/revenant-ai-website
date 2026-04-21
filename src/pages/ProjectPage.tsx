@@ -7,7 +7,7 @@ import { ProjectSection } from "../components/project/ProjectSection";
 import { ProjectCTA } from "../components/project/ProjectCTA";
 import { TechBadges } from "../components/project/TechBadges";
 import { Footer } from "../sections/Footer";
-import { TerminalVisualizer } from "../components/animations/TerminalVisualizer";
+import { ProjectHologram } from "../components/animations/ProjectHologram";
 
 /**
  * Data-driven project detail page at /manifestations/:slug. Reads the registry
@@ -122,7 +122,7 @@ export function ProjectPage() {
                   className="group block"
                 >
                   <div className="relative aspect-[4/3] bg-[#0a0a0a] overflow-hidden mb-4">
-                    <TerminalVisualizer context={p.slug} />
+                    <ProjectHologram />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   </div>
                   <p className="text-body-sm uppercase tracking-widest text-white/50 group-hover:text-highlight transition-colors duration-200 mb-1">

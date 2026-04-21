@@ -9,7 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { TerminalVisualizer } from '../components/animations/TerminalVisualizer';
+import { TextCascade } from '../components/animations/TextCascade';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -195,7 +195,7 @@ export function Blog() {
               {/* Image */}
               <div className="post-image relative aspect-[16/9] overflow-hidden mb-5 md:mb-6">
                 <div className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                  <TerminalVisualizer context="blog-node" />
+                  <TextCascade />
                 </div>
 
                 {/* Category tag */}
@@ -252,7 +252,7 @@ export function Blog() {
             <>
               {/* Header Image */}
               <div className="relative aspect-[21/9] w-full">
-                <TerminalVisualizer context="blog-node" />
+                <TextCascade />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                 <button
                   onClick={closePost}

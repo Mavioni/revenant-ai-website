@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Send, Check, Loader2 } from 'lucide-react';
 import { contactConfig } from '../config';
-import { TerminalVisualizer } from '../components/animations/TerminalVisualizer';
+import { TransmissionRadar } from '../components/animations/TransmissionRadar';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -452,7 +452,7 @@ export function Contact() {
             className="relative aspect-[2/3] lg:aspect-auto overflow-hidden"
             style={{ willChange: 'transform, clip-path' }}
           >
-            <TerminalVisualizer context="transmission" />
+            <TransmissionRadar className="opacity-90 grayscale-[20%]" />
 
             {/* Decorative blocks */}
             <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-highlight/20" aria-hidden="true" />
