@@ -153,8 +153,11 @@ export function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-highlight/30">
-                  <ResonanceOrb className="opacity-90" />
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-highlight/30 relative">
+                  <img src={testimonial.image} alt={testimonial.name} className="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.6]" />
+                  <div className="absolute inset-0 z-10 mix-blend-screen opacity-90 pointer-events-none">
+                    <ResonanceOrb />
+                  </div>
                 </div>
                 <div>
                   <p className="text-body font-medium text-white">

@@ -194,7 +194,10 @@ export function Blog() {
             >
               {/* Image */}
               <div className="post-image relative aspect-[16/9] overflow-hidden mb-5 md:mb-6">
-                <div className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.03]">
+                  <img src={post.image} alt="" className="w-full h-full object-cover grayscale brightness-[0.4]" />
+                </div>
+                <div className="absolute inset-0 z-10 pointer-events-none opacity-90 mix-blend-lighten">
                   <TextCascade />
                 </div>
 
@@ -250,10 +253,14 @@ export function Blog() {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-black border border-white/10 p-0">
           {selectedPost && (
             <>
-              {/* Header Image */}
-              <div className="relative aspect-[21/9] w-full">
-                <TextCascade />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+              <div className="relative aspect-[21/9] w-full bg-black">
+                <div className="absolute inset-0">
+                  <img src={selectedPost.image} alt="" className="w-full h-full object-cover grayscale brightness-[0.5]" />
+                </div>
+                <div className="absolute inset-0 z-10 opacity-70 pointer-events-none mix-blend-lighten">
+                  <TextCascade />
+                </div>
+                <div className="absolute inset-0 z-20 bg-gradient-to-t from-black via-black/50 to-transparent" />
                 <button
                   onClick={closePost}
                   className="absolute top-4 right-4 w-10 h-10 bg-black/80 backdrop-blur-sm flex items-center justify-center hover:bg-highlight transition-colors duration-300 rounded-full"

@@ -452,7 +452,12 @@ export function Contact() {
             className="relative aspect-[2/3] lg:aspect-auto overflow-hidden"
             style={{ willChange: 'transform, clip-path' }}
           >
-            <TransmissionRadar className="opacity-90 grayscale-[20%]" />
+            <div className="absolute inset-0">
+              <img src={contactConfig.image} alt="Contact Transmission" className="w-full h-full object-cover grayscale brightness-[0.4]" />
+            </div>
+            <div className="absolute inset-0 z-10 opacity-90 pointer-events-none mix-blend-screen">
+              <TransmissionRadar />
+            </div>
 
             {/* Decorative blocks */}
             <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-highlight/20" aria-hidden="true" />

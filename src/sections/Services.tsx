@@ -157,7 +157,14 @@ export function Services() {
         }}
       >
         {activeIndex !== null && (
-          <ServiceNodeNetwork />
+          <>
+            <div className="absolute inset-0">
+              <img src={services[activeIndex].image} alt={services[activeIndex].title} className="w-full h-full object-cover grayscale brightness-[0.3]" />
+            </div>
+            <div className="absolute inset-0 z-10 pointer-events-none mix-blend-screen opacity-100">
+              <ServiceNodeNetwork />
+            </div>
+          </>
         )}
       </div>
 

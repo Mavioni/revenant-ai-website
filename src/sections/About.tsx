@@ -192,8 +192,11 @@ export function About() {
               className="relative w-3/4 aspect-[2/3] -mt-24 md:-mt-32 ml-auto mr-4 overflow-hidden group cursor-pointer z-10 shadow-2xl shadow-black/50 bg-[#0a0a0a]"
               style={{ willChange: 'clip-path, transform' }}
             >
-              <AsciiSpaceshipVisualizer />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <img src={aboutConfig.image2} alt={aboutConfig.image2Alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+              <div className="absolute inset-0 z-10 mix-blend-screen pointer-events-none opacity-80">
+                <AsciiSpaceshipVisualizer />
+              </div>
+              <div className="absolute z-20 inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </div>
 

@@ -202,7 +202,10 @@ export function Works() {
                   // No aria-label: the visible title + category inside the link
                   // IS the accessible name (satisfies WCAG 2.5.3 label-in-name).
                 >
-                  <div className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none">
+                  <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.03]">
+                    <img src={project.heroImage} alt={project.name} className="w-full h-full object-cover grayscale brightness-[0.7]" />
+                  </div>
+                  <div className="absolute inset-0 pointer-events-none mix-blend-screen opacity-80">
                     <ProjectHologram seed={project.slug} />
                   </div>
 

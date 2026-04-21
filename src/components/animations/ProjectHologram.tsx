@@ -8,7 +8,6 @@ function HologramShape({ seed = '' }: { seed?: string }) {
 
   // Deterministically select a geometry based on the string seed length / char properties
   const shapeIndex = seed ? seed.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % 5 : 0;
-  const meshRef = useRef<THREE.Mesh>(null);
 
   useFrame((state) => {
     if (meshRef.current) {
